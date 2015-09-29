@@ -1,0 +1,21 @@
+<ons-page ng-controller="login">
+    <ons-toolbar>
+    <div class="center">Ingresar</div>
+    </ons-toolbar>
+
+    <div class="login-form">
+
+    <input type="text" class="text-input--underbar" placeholder="Email" style="width:100% !important" ng-model="usuario">
+    <input type="password" class="text-input--underbar" placeholder="Password" ng-model="pass">
+    <br><br>
+    <ons-button modifier="large" class="login-button" ng-click="ValidarIngreso()">Ingresar</ons-button>
+    <br><br>
+    <ons-button modifier="quiet" class="forgot-password">Olvido su contraseña?</ons-button>
+    </div>
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button>
+
+    <div id="status">
+    </div>
+
+</ons-page>

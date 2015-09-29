@@ -1,0 +1,25 @@
+<ons-page ng-controller="parcial">
+  <ons-toolbar>
+    <div class="left">
+      <ons-toolbar-button ng-click="app.slidingMenu.toggleMenu()"><ons-icon icon="bars"></ons-icon></ons-toolbar-button>
+    </div>
+      <div class="center">Parcial</div>
+  </ons-toolbar>
+
+  <div class="login-form">
+      
+      <input type="text" id="txtDescripcion" class="text-input--underbar" placeholder="Descripcion" style="width:100% !important" ng-model="descripcion">
+      <br>
+      <input type="text" class="text-input--underbar" placeholder="Numero de Articulos" style="width:100% !important" ng-model="numArticulos">
+      <br>
+      <input type="text" class="text-input--underbar" placeholder="Precio por Articulo" style="width:100% !important" ng-model="precioArticulo">
+      <br><br>
+      <ons-button modifier="small" class="login-button" ng-click="Calcular()">Calcular</ons-button>
+      <br><br>
+      <ons-button modifier="small" class="login-button" ng-click="Limpiar()">Continuar</ons-button>
+      
+      <table id="tblResultado"></table>
+      <br><br><br><br>
+      <h3 id="hresultado" style="color: brown;"></h3>
+  </div>
+</ons-page>
